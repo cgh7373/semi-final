@@ -37,25 +37,25 @@ function initializeFloatingAnimations() {
 
 }
 
-loginBtn.addEventListener('click', function () {
+// loginBtn.addEventListener('click', function () {
 
-    scrollToSection(2);
+//     scrollToSection(2);
 
-    for (let i = 1; i < icons.length; i++) {
+//     for (let i = 1; i < icons.length; i++) {
 
-        icons[0].style.visibility = 'hidden';
-        icons[0].style.opacity = 0;
+//         icons[0].style.visibility = 'hidden';
+//         icons[0].style.opacity = 0;
 
-        setTimeout(() => {
-            icons[i].style.visibility = 'visible';
-            icons[i].style.opacity = 1;
-            icons[i].style.transition = '2s';
-        }, 800 + (300 * (i + 1)));
-    };
+//         setTimeout(() => {
+//             icons[i].style.visibility = 'visible';
+//             icons[i].style.opacity = 1;
+//             icons[i].style.transition = '2s';
+//         }, 800 + (300 * (i + 1)));
+//     };
 
-    initializeFloatingAnimations();
+//     initializeFloatingAnimations();
 
-});
+// });
 
 document.querySelector('.turtle').addEventListener('click', () => scrollToSection(0));
 document.querySelector('.explore-tab').addEventListener('click', () => scrollToSection(1));

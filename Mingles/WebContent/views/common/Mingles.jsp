@@ -1,7 +1,10 @@
+<%@page import="com.kh.member.model.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	Member loginUser = (Member)session.getAttribute("loginUser");
 	String contextPath = request.getContextPath();
+	String alertMsg = (String)session.getAttribute("alertMsg");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +24,8 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+	<script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	
     <!-- 내부파일 -->
     <link rel="stylesheet" href="./resources/css/mingle.css">
     <script defer src="./resources/js/mingle.js"></script>
@@ -34,6 +38,13 @@
 </head>
 
 <body>
+
+	<script>
+		<% if (alertMsg != null) { %>
+		swal("<%=alertMsg%>");
+		<% session.removeAttribute("alertMsg"); %>
+		<% } %>
+	</script>
 
     <!-- 바탕화면 -->
     <div id="wrapper">
@@ -53,6 +64,8 @@
                                 src="./resources/images/Mingles 로고 gif(크기키움).gif" alt="Mingles 움직임 로고">
                         </div>
                     </div>
+                    
+                    <% if (loginUser == null) { %>
                     <!-- gif 로고 띄우기, 로그인 화면 띄우기 -->
                     <div class="appearBox">
 
@@ -61,22 +74,21 @@
                             <div id="form">
                                 <div class="form_area">
                                     <p class="title">Sign in</p>
-                                    <form action="">
+                                    <form action="<%=contextPath %>/login.me" method="post">
                                         <!-- 아이디 버튼 -->
                                         <div class="form_group">
                                             <label class="sub_title" for="name">ID</label>
-                                            <input placeholder="아이디를 입력하세요." class="form_style" type="text">
+                                            <input placeholder="아이디를 입력하세요." class="form_style" type="text" name="userId" required>
                                         </div>
 
                                         <!-- 비밀번호 버튼 -->
                                         <div class="form_group">
                                             <label class="sub_title" for="password">Password</label>
                                             <input placeholder="비밀번호를 입력하세요" id="password" class="form_style"
-                                                type="password">
+                                                type="password" name="userPwd" required>
                                         </div>
                                         <!-- 로그인 area -->
                                         <div class="login-area">
-                                            <!-- 로그인버튼누를떄 왜안내려가는지 해결필요 -->
                                             <button class="btn">LOG IN</button>
                                             <!-- 회원가입 버튼 -->
                                             <p class="announcement">처음이신가요? <a class="link" href="">회원가입하기!</a></p><a
@@ -96,7 +108,31 @@
                         </div>
 
                     </div>
+					<% } else { %>
+					<script>
+					document.addEventListener("DOMContentLoaded", function() {
+						
+						setTimeout(() => {
+							
+						    scrollToSection(2);
 
+						    for (let i = 1; i < icons.length; i++) {
+
+						        icons[0].style.visibility = 'hidden';
+						        icons[0].style.opacity = 0;
+
+						        setTimeout(() => {
+						            icons[i].style.visibility = 'visible';
+						            icons[i].style.opacity = 1;
+						            icons[i].style.transition = '2s';
+						        }, 800 + (300 * (i + 1)));
+						    };
+
+						    initializeFloatingAnimations();
+						}, 1200)
+					});
+					</script>
+					<% } %>
                 </div>
 
             </div>
@@ -128,7 +164,7 @@
                 <iframe src="./settings/mingle-settings.html" class="mgScreens iframe-settings"
                     frameborder="0"></iframe>
                 <iframe src="./shop/mingle-shop.html" class="mgScreens iframe-shop" frameborder="0"></iframe>
-                <iframe src="./style/mingle-style.html" class="mgScreens iframe-style" frameborder="0"></iframe>
+                <iframe src="./mingle-style.jsp" class="mgScreens iframe-style" frameborder="0"></iframe>
                 <iframe src="./chat/chat.html" class="mgScreens iframe-chat" frameborder="0"></iframe>
             </div>
 
