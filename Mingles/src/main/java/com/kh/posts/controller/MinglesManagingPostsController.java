@@ -1,4 +1,4 @@
-package com.kh.member.controller;
+package com.kh.posts.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,22 +6,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import com.kh.member.model.service.MemberService;
-import com.kh.member.model.vo.Member;
 
 /**
- * Servlet implementation class LoginController
+ * Servlet implementation class MinglesManagingPostsController
  */
-@WebServlet("/login.me")
-public class LoginController extends HttpServlet {
+@WebServlet("/postsForm.mi")
+public class MinglesManagingPostsController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginController() {
+    public MinglesManagingPostsController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,21 +26,7 @@ public class LoginController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String userId = request.getParameter("userId");
-		String userPwd = request.getParameter("userPwd");
-		
-		Member m = new MemberService().loginMember(userId, userPwd);
-		
-		HttpSession session = request.getSession();
-		
-		if (m != null) {
-			session.setAttribute("loginUser", m);
-			response.sendRedirect(request.getContextPath());
-		} else {
-			session.setAttribute("alertMsg", "로그인 실패");
-			response.sendRedirect(request.getContextPath());
-		}
+		request.getRequestDispatcher("views/posts/minglesManagingPosts.jsp").forward(request, response);
 	}
 
 	/**

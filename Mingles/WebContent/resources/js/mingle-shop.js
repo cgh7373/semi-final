@@ -217,7 +217,7 @@ const setPage = function (pageNum) {
         
         // 이미지파트.. 이거 나중에 수정해야됨
         const innerImage = document.createElement('img');
-        innerImage.src = '../resources/images/Mingles-움직임.gif';
+        innerImage.src = '../../resources/images/Mingles-움직임.gif';
 
         const itemContainer = document.createElement('div');
         itemContainer.className = 'item-container';

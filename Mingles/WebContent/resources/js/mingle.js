@@ -8,6 +8,7 @@ const screens = document.querySelectorAll('.iframe-wrapper iframe');
 const icons = document.querySelectorAll('.material-icons');
 const loginBtn = document.querySelector('.login-btn');
 const main = document.querySelector('.main-page');
+const iPosts = document.querySelector('.iframe-posts');
 
 function scrollToSection(index) {
     const sections = document.querySelectorAll('section');
@@ -37,27 +38,6 @@ function initializeFloatingAnimations() {
 
 }
 
-// loginBtn.addEventListener('click', function () {
-
-//     scrollToSection(2);
-
-//     for (let i = 1; i < icons.length; i++) {
-
-//         icons[0].style.visibility = 'hidden';
-//         icons[0].style.opacity = 0;
-
-//         setTimeout(() => {
-//             icons[i].style.visibility = 'visible';
-//             icons[i].style.opacity = 1;
-//             icons[i].style.transition = '2s';
-//         }, 800 + (300 * (i + 1)));
-//     };
-
-//     initializeFloatingAnimations();
-
-// });
-
-document.querySelector('.turtle').addEventListener('click', () => scrollToSection(0));
 document.querySelector('.explore-tab').addEventListener('click', () => scrollToSection(1));
 document.querySelector('.diver').addEventListener('click', function() {
 
@@ -163,6 +143,7 @@ document.querySelector('.shopTab').addEventListener('click', () => handleIframeN
 document.querySelector('.styleTab').addEventListener('click', () => handleIframeNavigation(iStyle));
 document.querySelector('.chatTab').addEventListener('click', () => handleIframeNavigation(iChat));
 document.querySelector('.explore-tab').addEventListener('click', () => showExplore(iExplore));
+document.querySelector('.postsTab').addEventListener('click', () => handleIframeNavigation(iPosts));
 
 
 

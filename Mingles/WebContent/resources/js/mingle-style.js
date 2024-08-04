@@ -178,7 +178,7 @@ const setPage = function (pageNum) {
         li.className = 'items';
 
         const itemImg = document.createElement('img');
-        itemImg.src = './resources/images/'
+        itemImg.src = '../../resources/images/'
 
 
         itemImg.src += data[i - 1].itemImg;

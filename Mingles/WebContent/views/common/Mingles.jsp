@@ -15,6 +15,7 @@
     <title>Mingles Frame</title>
 
     <!-- 외부파일 -->
+	<script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -24,26 +25,26 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	
     <!-- 내부파일 -->
     <link rel="stylesheet" href="./resources/css/mingle.css">
-    <script defer src="./resources/js/mingle.js"></script>
+    <script defer src="<%=contextPath %>/resources/js/mingle.js"></script>
     <link rel="icon" href="./resources/images/Mingles_로고_png_크기키움_-removebg-preview.png">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- https://animate.style/ 웹사이트 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
 </head>
 
 <body>
 
 	<script>
+	document.addEventListener("DOMContentLoaded", function() {
 		<% if (alertMsg != null) { %>
 		swal("<%=alertMsg%>");
 		<% session.removeAttribute("alertMsg"); %>
 		<% } %>
+	});
 	</script>
 
     <!-- 바탕화면 -->
@@ -91,9 +92,7 @@
                                         <div class="login-area">
                                             <button class="btn">LOG IN</button>
                                             <!-- 회원가입 버튼 -->
-                                            <p class="announcement">처음이신가요? <a class="link" href="">회원가입하기!</a></p><a
-                                                class="link" href="">
-                                            </a>
+                                            <p class="announcement">처음이신가요? <a class="link" href="<%=contextPath%>/enroll.mi">회원가입하기!</a></p>
                                         </div>
                                     </form>
                                     <!-- 간편로그인 버튼 -->
@@ -145,7 +144,7 @@
 
             <!-- 탐색창 틀 -->
             <div class="explore-wrap">
-                <iframe src="./mingle-community/mingle community.html" style="visibility: visible; opacity: 1;" frameborder="0"></iframe>
+                <iframe src="./views/community/minglesCommunity.jsp" style="visibility: visible; opacity: 1;" frameborder="0"></iframe>
             </div>
 
             <div class="diver float"><img src="./resources/images/173526028-젊은-남자-캐릭터-스쿠버-다이빙-또는-오리발과-고글-벡터-일러스트와-함께-수중-removebg-preview.png" alt=""></div>
@@ -159,13 +158,15 @@
             <!-- 메인화면 프레임 -->
             <div class="iframe-wrapper">
 
-                <iframe src="./mingles-메인 화면/mingles-main.html" class="mgScreens iframe-main"
+                <iframe src="./views/main/minglesMain.jsp" class="mgScreens iframe-main"
                     frameborder="0"></iframe>
-                <iframe src="./settings/mingle-settings.html" class="mgScreens iframe-settings"
+                <iframe src="./views/settings/minglesSettings.jsp" class="mgScreens iframe-settings"
                     frameborder="0"></iframe>
-                <iframe src="./shop/mingle-shop.html" class="mgScreens iframe-shop" frameborder="0"></iframe>
-                <iframe src="./mingle-style.jsp" class="mgScreens iframe-style" frameborder="0"></iframe>
-                <iframe src="./chat/chat.html" class="mgScreens iframe-chat" frameborder="0"></iframe>
+                <iframe src="./views/shop/minglesShop.jsp" class="mgScreens iframe-shop" frameborder="0"></iframe>
+                <iframe src="./views/style/minglesStyle.jsp" class="mgScreens iframe-style" frameborder="0"></iframe>
+                <iframe src="./views/chat/minglesChat.jsp" class="mgScreens iframe-chat" frameborder="0"></iframe>
+                <iframe src="./views/posts/minglesPosts.jsp" class="mgScreens iframe-posts" frameborder="0"></iframe>
+                
             </div>
 
 
@@ -190,14 +191,14 @@
             <!-- 탐색탭 -->
             <span class="material-icons explore-tab" title="탐색">travel_explore</span>
 
-            <!-- 아무탭4 -->
+            <!-- 꾸미기탭 -->
             <span class="material-icons styleTab" title="꾸미기">accessibility</span>
 
             <!-- 채팅탭 -->
             <span class="material-icons chatTab" title="채팅">question_answer</span>
 
-            <!-- 아무탭6 -->
-            <span class="material-icons anyTab6">add_circle_outline</span>
+            <!-- 게시글탭 -->
+            <span class="material-icons postsTab" title="게시글">article</span>
 
             <!-- 아무탭7 -->
             <span class="material-icons anyTab7">add_circle_outline</span>
