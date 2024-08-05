@@ -17,7 +17,6 @@
     <!-- 외부파일 -->
 	<script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
@@ -29,7 +28,7 @@
     <!-- 내부파일 -->
     <link rel="stylesheet" href="./resources/css/mingle.css">
     <script defer src="<%=contextPath %>/resources/js/mingle.js"></script>
-    <link rel="icon" href="./resources/images/Mingles_로고_png_크기키움_-removebg-preview.png">
+    <link rel="icon" href="./resources/images/Mingles아이콘-removebg-preview.png">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- https://animate.style/ 웹사이트 -->
@@ -208,30 +207,12 @@
 
         
             <!-- 거북이 -->
-            <div class="turtle float"><img
+            <div class="turtle float" onclick="goBack()"><img
                     src="./resources/images/3d-cute-turtle-character_1004243-616-removebg-preview.png"></div>
 
         </section>
 
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
 
 </body>
 

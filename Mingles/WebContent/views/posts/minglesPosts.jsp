@@ -87,88 +87,7 @@
                             <li>내용6</li>
                             <li>내용7</li>
                         </ul>
-                    
-                        <ul>
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
+
                         <ul>
                             <li>내용1</li>
                             <li>내용2</li>
@@ -182,34 +101,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- 홈키 -->
-        <button id="homeKey" class="rounded-circle"></button>
-
-        <!-- 메뉴바 -->
-        <div id="menuBar">
-
-            <div id="menuWrap">
-
-                <!-- 뒤로가기버튼 -->
-                <button id="menuBack" class="rounded-circle" style="width: 70px; height: 70px; background-color: white; border: none;">
-                    <img src="../../resources/images/greenpointer.png" style="background-color: white; width: 70%; height: 70%;">
-                    <!-- 화살표 이미지(->)로 변경, deg(270 제거) -->
-                </button>
-
-                <!-- mHead -->
-                 <div id="mHead"><img src="../../resources/images/밍글로고.PNG" style = "width:90%; height:90%;"></div>
-
-                <!-- mBody -->
-                 <div id="mBody"></div>
-
-                <!-- mFoot -->
-                 <div id="mFoot"></div>
-
-            </div>
-
-        </div>
-
     </div>
 
 </body>

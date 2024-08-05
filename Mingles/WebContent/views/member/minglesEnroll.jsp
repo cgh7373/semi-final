@@ -47,19 +47,19 @@
         <!-- 아이디 입력 -->
         <div class="form_group">
           <label class="sub_title" for="id">ID</label>
-          <input placeholder="영문으로 시작하는 영문자&숫자 6~20자" class="form_style" id="id"type="text" required />
+          <input placeholder="영문으로 시작하는 영문자&숫자 6~20자" class="form_style" id="id" type="text" name="enrollId" required/>
         </div>
 
         <!-- 비밀번호 입력 -->
         <div class="form_group">
           <label class="sub_title" for="password">Password</label>
-          <input placeholder="영문, 숫자로 구성된 8~16자" class="form_style" id="password" type="password" required />
+          <input placeholder="영문, 숫자로 구성된 8~16자" class="form_style" id="password" type="password" name="enrollPwd" required/>
         </div>
 
         <!-- 이름(닉네임) 입력 -->
         <div class="form_group">
           <label class="sub_title" for="name">이름 (닉네임)</label>
-          <input placeholder="한글, 영문 사용 8자 이내(특수문자x)" class="form_style" id="name" type="text" required />
+          <input placeholder="한글, 영문 사용 8자 이내(특수문자x)" class="form_style" id="name" type="text" name="enrollNickname" required />
           <button class = "verification">
             <span class="text">본인인증</span>
           </button>
@@ -67,20 +67,20 @@
 
         <!-- 생년월일 입력 -->
         <div class="form_group">
-          <label class="sub_title" for="birthday">생년월일</label>
-          <input class="form_style" id= "birthday" type="date" />
+          <label class="sub_title" for="birthdate">생년월일</label>
+          <input class="form_style" id= "birthdate" type="date" name="enrollBirthdate" />
         </div>
 
         <!-- 휴대폰 번호 입력  -->
         <div class="form_group">
           <label class="sub_title" for="phone">휴대폰번호</label>
-          <input placeholder="-없이 입력하세요" class="form_style" id="phone" type="text" required/>
+          <input placeholder="-없이 입력하세요" class="form_style" id="phone" type="text" name="enrollPhone" required/>
         </div>
 
         <!-- 이메일 입력 -->
         <div class="form_group">
           <label class="sub_title" for="email">Email</label>
-          <input placeholder="이메일을 입력하세요" class="form_style" id="email" type="email" required/>
+          <input placeholder="이메일을 입력하세요" class="form_style" id="email" type="email" name="enrollEmail" required/>
         </div>
 
         <!-- 성별 입력 -->

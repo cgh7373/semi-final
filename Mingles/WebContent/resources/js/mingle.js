@@ -93,12 +93,23 @@ icons.forEach(icon => {
     });
 });
 
-function handleIframeNavigation(iframe) {
+const iframeSources = {
+    settings: "/Mingles/views/settings/minglesSettings.jsp",
+    main: "/Mingles/views/main/minglesMain.jsp",
+    shop: "/Mingles/views/shop/minglesShop.jsp",
+    style: "/Mingles/views/style/minglesStyle.jsp",
+    chat: "/Mingles/views/chat/minglesChat.jsp",
+    explore: "/Mingles/views/community/minglesCommunity.jsp",
+    posts: "/Mingles/views/posts/minglesPosts.jsp"
+};
+
+function handleIframeNavigation(iframe, source) {
     screens.forEach(a => {
         a.style.opacity = 0;
         a.style.transition = '.6s';
         a.style.visibility = 'hidden';
     });
+
     document.querySelector('.iframe-wrapper').animate(
         [
             { transform: 'scale(1)' },
@@ -111,7 +122,9 @@ function handleIframeNavigation(iframe) {
             easing: 'ease'
         }
     );
+
     setTimeout(() => {
+        iframe.src = iframeSources[source];
         iframe.style.opacity = 1;
         iframe.style.visibility = 'visible';
     }, 100);
@@ -137,13 +150,13 @@ icons.forEach((icon, index) => {
 });
 
 // 여기에 아이프레임
-document.querySelector('.settings').addEventListener('click', () => handleIframeNavigation(iSettings));
-document.querySelector('.mainTab').addEventListener('click', () => handleIframeNavigation(iMain));
-document.querySelector('.shopTab').addEventListener('click', () => handleIframeNavigation(iShop));
-document.querySelector('.styleTab').addEventListener('click', () => handleIframeNavigation(iStyle));
-document.querySelector('.chatTab').addEventListener('click', () => handleIframeNavigation(iChat));
+document.querySelector('.settings').addEventListener('click', () => handleIframeNavigation(iSettings, 'settings'));
+document.querySelector('.mainTab').addEventListener('click', () => handleIframeNavigation(iMain, 'main'));
+document.querySelector('.shopTab').addEventListener('click', () => handleIframeNavigation(iShop, 'shop'));
+document.querySelector('.styleTab').addEventListener('click', () => handleIframeNavigation(iStyle, 'style'));
+document.querySelector('.chatTab').addEventListener('click', () => handleIframeNavigation(iChat, 'chat'));
 document.querySelector('.explore-tab').addEventListener('click', () => showExplore(iExplore));
-document.querySelector('.postsTab').addEventListener('click', () => handleIframeNavigation(iPosts));
+document.querySelector('.postsTab').addEventListener('click', () => handleIframeNavigation(iPosts, 'posts'));
 
 
 

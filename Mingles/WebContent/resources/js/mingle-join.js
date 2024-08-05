@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
   // 아이디 정규화
   let regExp = /^[a-zA-Z][a-zA-Z0-9]{5,19}$/;
   alertId.addEventListener("change", function(){
-    if(!regExp.test(alertId.value.trim())){
+    if(!regExp.test(alertId.value)){
       alert("올바른 형식의 아이디가 아닙니다.");
       console.log(alertId.value);}
   })

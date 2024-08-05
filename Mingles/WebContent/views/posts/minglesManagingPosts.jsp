@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- 내부파일 -->
-    <link rel="stylesheet" href="./resources/css/mingleManagingPosts.css">
     <script src="./resources/js/mingleManagingPosts.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./resources/css/mingleManagingPosts.css">
 
 </head>
 
@@ -52,6 +52,7 @@
                             <li>내용6</li>
                             <li>내용7</li>
                         </ul>
+
                         <ul>
                             <input type="checkbox" class="list__check" id="ch1" name="choice">
                             <li>내용1</li>
@@ -62,88 +63,9 @@
                             <li>내용6</li>
                             <li>내용7</li>
                         </ul>
+
                         <ul>
                             <input type="checkbox" class="list__check" id="ch2" name="choice">
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <input type="checkbox" class="list__check" id="ch3" name="choice">
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <input type="checkbox" class="list__check" id="ch4" name="choice">
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <input type="checkbox" class="list__check" id="ch5" name="choice">
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <input type="checkbox" class="list__check" id="ch6" name="choice">
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <input type="checkbox" class="list__check" id="ch7" name="choice">
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <input type="checkbox" class="list__check" id="ch8" name="choice">
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <input type="checkbox" class="list__check" id="ch9" name="choice">
-                            <li>내용1</li>
-                            <li>내용2</li>
-                            <li>내용3</li>
-                            <li>내용4</li>
-                            <li>내용5</li>
-                            <li>내용6</li>
-                            <li>내용7</li>
-                        </ul>
-                        <ul>
-                            <input type="checkbox" class="list__check" id="ch10" name="choice">
                             <li>내용1</li>
                             <li>내용2</li>
                             <li>내용3</li>
@@ -156,34 +78,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- 홈키 -->
-        <button id="homeKey" class="rounded-circle"></button>
-
-        <!-- 메뉴바 -->
-        <div id="menuBar">
-
-            <div id="menuWrap">
-
-                <!-- 뒤로가기버튼 -->
-                <button id="menuBack" class="rounded-circle" style="width: 70px; height: 70px; background-color: white; border: none;">
-                    <img src="resources/images/greenpointer.png" style="background-color: white; width: 70%; height: 70%;">
-                    <!-- 화살표 이미지(->)로 변경, deg(270 제거) -->
-                </button>
-
-                <!-- mHead -->
-                 <div id="mHead"><img src="../../resources/images/밍글로고.PNG" style = "width:90%; height:90%;"></div>
-
-                <!-- mBody -->
-                 <div id="mBody"></div>
-
-                <!-- mFoot -->
-                 <div id="mFoot"></div>
-
-            </div>
-
-        </div>
-
     </div>
 
 </body>
