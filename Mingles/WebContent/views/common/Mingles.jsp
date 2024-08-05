@@ -5,6 +5,7 @@
 	Member loginUser = (Member)session.getAttribute("loginUser");
 	String contextPath = request.getContextPath();
 	String alertMsg = (String)session.getAttribute("alertMsg");
+	String errorMsg = (String)session.getAttribute("errorMsg");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,7 @@
     <title>Mingles Frame</title>
 
     <!-- 외부파일 -->
-	<script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -24,12 +25,12 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	
     <!-- 내부파일 -->
     <link rel="stylesheet" href="./resources/css/mingle.css">
     <script defer src="<%=contextPath %>/resources/js/mingle.js"></script>
     <link rel="icon" href="./resources/images/Mingles아이콘-removebg-preview.png">
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- https://animate.style/ 웹사이트 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -39,11 +40,23 @@
 
 	<script>
 	document.addEventListener("DOMContentLoaded", function() {
-		<% if (alertMsg != null) { %>
-		swal("<%=alertMsg%>");
-		<% session.removeAttribute("alertMsg"); %>
-		<% } %>
-	});
+		// 성공메시지
+		 <% if (alertMsg != null) { %>
+       		 Swal.fire({
+             icon: 'success',
+             title: '<%=alertMsg%>',
+        	 });
+         <% session.removeAttribute("alertMsg"); %>
+   		 <% } %>
+
+   		 <% if (errorMsg != null) { %>
+       		 Swal.fire({
+             icon: 'error',
+             title: '<%=errorMsg%>',
+        	 });
+         <% session.removeAttribute("errorMsg"); %>
+    	 <% } %>
+		 });
 	</script>
 
     <!-- 바탕화면 -->

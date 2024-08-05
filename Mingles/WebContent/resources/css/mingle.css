@@ -412,3 +412,11 @@ iframe {
         scale: 1;
     }
 }
+/* Swal2 팝업의 아이콘 조정 */
+/* 이거 수정이필요ㅜ */
+.swal2-popup .swal2-icon {
+    margin: 0 auto; /* 아이콘 중앙 정렬 */
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+}

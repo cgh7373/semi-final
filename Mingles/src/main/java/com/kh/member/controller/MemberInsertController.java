@@ -12,16 +12,16 @@ import com.kh.member.model.service.MemberService;
 import com.kh.member.model.vo.Member;
 
 /**
- * Servlet implementation class LoginController
+ * Servlet implementation class MemberInsertController
  */
-@WebServlet("/login.me")
-public class LoginController extends HttpServlet {
+@WebServlet("/insert.mi")
+public class MemberInsertController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginController() {
+    public MemberInsertController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,21 +31,29 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String userId = request.getParameter("userId");
-		String userPwd = request.getParameter("userPwd");
+		request.setCharacterEncoding("utf-8");
 		
-		Member m = new MemberService().loginMember(userId, userPwd);
+		String enrollId = request.getParameter("enrollId");
+		String enrollPwd = request.getParameter("enrollPwd");
+		String enrollNickname = request.getParameter("enrollNickname");
+		String enrollBirthdate = request.getParameter("enrollBirthdate");
+		String enrollPhone = request.getParameter("enrollPhone");
+		String enrollEmail = request.getParameter("enrollEmail");
+		String gender = request.getParameter("gender");
+		
+		Member m = new Member(enrollId, enrollPwd, enrollNickname, enrollBirthdate, enrollPhone, enrollEmail, gender);
+		
+		int result = new MemberService().insertMember(m);
 		
 		HttpSession session = request.getSession();
-		
-		if (m != null) {
-			session.setAttribute("loginUser", m);
-			session.setAttribute("alertMsg", m.getNickname() + "님, 환영해요!");
+		if (result > 0) {
+			session.setAttribute("alertMsg", "회원가입 성공");
 			response.sendRedirect(request.getContextPath());
 		} else {
-			session.setAttribute("errorMsg", "로그인 실패");
-			response.sendRedirect(request.getContextPath());
+			session.setAttribute("errorMsg", "회원가입 실패");
+			request.getRequestDispatcher("views/member/minglesEnroll.jsp").forward(request, response);
 		}
+		
 	}
 
 	/**

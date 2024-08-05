@@ -1,5 +1,9 @@
+<%@page import="com.kh.member.model.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Member loginUser = (Member)session.getAttribute("loginUser");
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,10 +66,13 @@
 
                         <div class="top__right">
 
-                            <div class="nickName">닉네임</div>
-
-                            <div class="userEmail">email@email.com</div>
-
+							<% if (loginUser != null) { %>
+                            <div class="nickName"><%=loginUser.getNickname() %></div>
+                            <div class="userEmail"><%=loginUser.getEmail() %></div>
+                            <% } else { %>
+							<div class="nickName">로그인이 필요해요</div>
+                            <div class="userEmail">로그인이 필요해요</div>
+							<% } %>
                         </div>
 
                     </div>

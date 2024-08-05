@@ -18,6 +18,9 @@
   <!-- https://animate.style/ 웹사이트 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+  <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <!-- 내부파일 -->
   <link rel="stylesheet" href="./resources/css/mingle-join.css">
   <script src="./resources/js/mingle-join.js"></script>
@@ -43,7 +46,7 @@
        <!-- 회원가입 화면 -->
       <div class="form_area">
         <p class="title">회원 가입</p>
-      <form action="">
+      <form action="<%=request.getContextPath()%>/insert.mi">
         <!-- 아이디 입력 -->
         <div class="form_group">
           <label class="sub_title" for="id">ID</label>
@@ -92,9 +95,9 @@
 
         </div>
 
-        <!-- 추가정보 입력버튼 -->
+        <!-- 추가정보 입력버튼 (일단 submit으로 해놓음) -->
         <div>
-          <button class="btn">추가 정보 입력</button>
+          <button class="btn" type="submit">추가 정보 입력</button>
         </div>
       </form>
 
@@ -190,10 +193,6 @@
 
   </div>
 
-  <!-- 홈키 -->
-  <button id="homeKey" class="rounded-circle"></button>
-
-    
       <!-- mBody -->
       <div id="mBody"></div>
 

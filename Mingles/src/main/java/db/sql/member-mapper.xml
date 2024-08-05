@@ -20,7 +20,31 @@
 			  AND STATUS = 'Y'
 	</entry>
 
-
+	<entry key="insertMember">
+		INSERT INTO 
+					MEMBER
+				  (
+				  	MEM_NO
+				  , MEM_ID
+				  , MEM_PWD
+				  , NICKNAME
+				  , BIRTHDATE
+				  , PHONE
+				  , EMAIL
+				  , GENDER
+				  )
+				    VALUES 
+				  (
+				  	SEQ_MEM.NEXTVAL
+				  , ?
+				  , ?
+				  , ?
+				  , ?
+				  , ?
+				  , ?
+				  , ?
+				  )
+	</entry>
 
 
 

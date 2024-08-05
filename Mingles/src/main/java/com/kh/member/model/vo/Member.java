@@ -32,6 +32,18 @@ public class Member {
 		this.status = status;
 	}
 
+	public Member(String memId, String memPwd, String nickname, String birthdate, String phone, String email,
+			String gender) {
+		super();
+		this.memId = memId;
+		this.memPwd = memPwd;
+		this.nickname = nickname;
+		this.birthdate = birthdate;
+		this.phone = phone;
+		this.email = email;
+		this.gender = gender;
+	}
+
 	public int getMemNo() {
 		return memNo;
 	}
