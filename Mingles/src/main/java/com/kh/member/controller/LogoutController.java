@@ -28,7 +28,7 @@ public class LogoutController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.getSession().invalidate();
-		request.getSession().setAttribute("alertMsg", "로그아웃 되었습니다");
+		request.getSession().setAttribute("alertMsg", "로그아웃 되었어요");
 		response.sendRedirect(request.getContextPath());
 		
 	}
