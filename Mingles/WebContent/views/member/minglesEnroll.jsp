@@ -1,3 +1,4 @@
+<%@page import="com.kh.member.model.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -32,7 +33,7 @@
 <body>
 
   <div id="wrap">
-
+  
     <!-- 메인 화면 -->
     <div id="container">
       
@@ -100,7 +101,7 @@
           <button class="btn" type="submit">추가 정보 입력</button>
         </div>
       </form>
-
+	
     </div>
  
      

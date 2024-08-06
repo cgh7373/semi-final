@@ -56,6 +56,7 @@ public class MemberDao {
 								, rset.getString(9)
 								, rset.getString(10)
 								, rset.getString(11)
+								, rset.getString(12)
 							  );
 				
 			}
@@ -70,7 +71,7 @@ public class MemberDao {
 		return m;
 	}
 
-	public int insertMember(Connection conn, Member m) {
+	public int insertMember(Connection conn, Member m, String zodiacSign) {
 		
 		int result = 0;
 		PreparedStatement pstmt = null;
@@ -86,6 +87,7 @@ public class MemberDao {
 			pstmt.setString(5, m.getPhone());
 			pstmt.setString(6, m.getEmail());
 			pstmt.setString(7, m.getGender());
+			pstmt.setString(8, zodiacSign);
 			
 			result = pstmt.executeUpdate();
 			
@@ -97,6 +99,7 @@ public class MemberDao {
 		
 		return result;
 	}
+
 
 	
 	

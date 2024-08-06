@@ -25,7 +25,7 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	
     <!-- 내부파일 -->
     <link rel="stylesheet" href="./resources/css/mingle.css">
@@ -42,7 +42,7 @@
 	document.addEventListener("DOMContentLoaded", function() {
 		// 성공메시지
 		 <% if (alertMsg != null) { %>
-       		 Swal.fire({
+       		 swal({
              icon: 'success',
              title: '<%=alertMsg%>',
         	 });
@@ -50,7 +50,7 @@
    		 <% } %>
 
    		 <% if (errorMsg != null) { %>
-       		 Swal.fire({
+       		 swal({
              icon: 'error',
              title: '<%=errorMsg%>',
         	 });
@@ -73,8 +73,15 @@
                     <!-- 사라지는 로고 -->
                     <div class="logo-wrap animate__animated animate__zoomOut animate__delay-1s">
                         <div class="logo--disappear">
-                            <img class="animate__animated animate__zoomOut animate__delay-1s"
-                                src="./resources/images/Mingles 로고 gif(크기키움).gif" alt="Mingles 움직임 로고">
+                            <h1 class="animate__animated animate__zoomOut animate__delay-1s">
+                                <span>M</span>
+                                <span>I</span>
+                                <span>N</span>
+                                <span>G</span>
+                                <span>L</span>
+                                <span>E</span>
+                                <span>S</span>
+                            </h1>
                         </div>
                     </div>
                     

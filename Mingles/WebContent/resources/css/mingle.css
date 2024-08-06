@@ -79,30 +79,19 @@ iframe {
 .logo-wrap {
     width: 100%;
     height: 100%;
-    background-color: #fff;
     position: absolute;
     border-radius: 20px;
-    border: 4px solid #48BFE3;
 }
 
 /* 사라지는 로고 */
 .logo--disappear {
-    margin-top: 150px;
+    margin-top: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logo--disappear>img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.appearBox {
-    position: relative;
-    display: inline;
-}
 
 /* 점차 생기는 로그인 화면 */
 #form {
@@ -412,11 +401,106 @@ iframe {
         scale: 1;
     }
 }
-/* Swal2 팝업의 아이콘 조정 */
-/* 이거 수정이필요ㅜ */
-.swal2-popup .swal2-icon {
-    margin: 0 auto; /* 아이콘 중앙 정렬 */
-    display: flex; /* Flexbox 사용 */
-    align-items: center; /* 세로 중앙 정렬 */
-    justify-content: center; /* 가로 중앙 정렬 */
-}
+@-webkit-keyframes jello-horizontal {
+                0% {
+                    -webkit-transform: scale3d(1,1,1);
+                    transform: scale3d(1,1,1);
+                }
+                30% {
+                    -webkit-transform: scale3d(1.25,.75,1);
+                    transform: scale3d(1.25,.75,1);
+                }
+                40% {
+                    -webkit-transform: scale3d(.75,1.25,1);
+                    transform: scale3d(.75,1.25,1);
+                }
+                50% {
+                    -webkit-transform: scale3d(1.15,.85,1);
+                    transform: scale3d(1.15,.85,1);
+                }
+                65% {
+                    -webkit-transform: scale3d(.95,1.05,1);
+                    transform: scale3d(.95,1.05,1);
+                }
+                75% {
+                    -webkit-transform: scale3d(1.05,.95,1);
+                    transform: scale3d(1.05,.95,1);
+                }
+                100% {
+                    -webkit-transform: scale3d(1,1,1);
+                    transform: scale3d(1,1,1);
+                }
+            }
+            @keyframes jello-horizontal {
+                0% {
+                    -webkit-transform: scale3d(1,1,1);
+                    transform: scale3d(1,1,1);
+                }
+                30% {
+                    -webkit-transform: scale3d(1.25,.75,1);
+                    transform: scale3d(1.25,.75,1);
+                }
+                40% {
+                    -webkit-transform: scale3d(.75,1.25,1);
+                    transform: scale3d(.75,1.25,1);
+                }
+                50% {
+                    -webkit-transform: scale3d(1.15,.85,1);
+                    transform: scale3d(1.15,.85,1);
+                }
+                65% {
+                    -webkit-transform: scale3d(.95,1.05,1);
+                    transform: scale3d(.95,1.05,1);
+                }
+                75% {
+                    -webkit-transform: scale3d(1.05,.95,1);
+                    transform: scale3d(1.05,.95,1);
+                }
+                100% {
+                    -webkit-transform: scale3d(1,1,1);
+                    transform: scale3d(1,1,1);
+                }
+            }
+
+            h1 {
+                height: 100px;
+            }
+
+
+            h1 span {
+                position: relative;
+                top: 10%;
+                display: inline-block;
+                animation: jello-horizontal 0.5s both;
+                font-family: 'omyu_pretty', cursive;
+                font-size: 120px;
+                color: aliceblue;
+                text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, .4);
+            }
+
+            h1 span:nth-child(2) {
+                animation-delay: 0.1s;
+            }
+            h1 span:nth-child(3) {
+                animation-delay: 0.2s;
+            }
+            h1 span:nth-child(4) {
+                animation-delay: 0.3s;
+            }
+            h1 span:nth-child(5) {
+                animation-delay: 0.4s;
+            }
+            h1 span:nth-child(6) {
+                animation-delay: 0.5s;
+            }
+            h1 span:nth-child(7) {
+                animation-delay: 0.6s;
+            }
+
+            @keyframes bounce {
+                100% {
+                    top: -20px;
+                    text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 #CCC, 0 7px 0 #CCC, 0 8px 0 #CCC, 0 9px 0 #CCC, 0 50px 25px rgba(0, 0, 0, .2);
+                }
+            }
+

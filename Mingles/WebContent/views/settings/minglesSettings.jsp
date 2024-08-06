@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	Member loginUser = (Member)session.getAttribute("loginUser");
+	Member m = (Member)session.getAttribute("loginUser");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,9 +66,9 @@
 
                         <div class="top__right">
 
-							<% if (loginUser != null) { %>
-                            <div class="nickName"><%=loginUser.getNickname() %></div>
-                            <div class="userEmail"><%=loginUser.getEmail() %></div>
+							<% if (m != null) { %>
+                            <div class="nickName"><%=m.getNickname() %></div>
+                            <div class="userEmail"><%=m.getEmail() %></div>
                             <% } else { %>
 							<div class="nickName">로그인이 필요해요</div>
                             <div class="userEmail">로그인이 필요해요</div>

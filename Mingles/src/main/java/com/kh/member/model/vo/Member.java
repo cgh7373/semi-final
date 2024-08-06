@@ -13,6 +13,7 @@ public class Member {
 	private String enrollDate; 
 	private String modifyDate;
 	private String status;
+	private String zodiac;
 	
 	public Member() {}
 
@@ -42,6 +43,23 @@ public class Member {
 		this.phone = phone;
 		this.email = email;
 		this.gender = gender;
+	}
+
+	public Member(int memNo, String memId, String memPwd, String nickname, String birthdate, String phone, String email,
+			String gender, String enrollDate, String modifyDate, String status, String zodiac) {
+		super();
+		this.memNo = memNo;
+		this.memId = memId;
+		this.memPwd = memPwd;
+		this.nickname = nickname;
+		this.birthdate = birthdate;
+		this.phone = phone;
+		this.email = email;
+		this.gender = gender;
+		this.enrollDate = enrollDate;
+		this.modifyDate = modifyDate;
+		this.status = status;
+		this.zodiac = zodiac;
 	}
 
 	public int getMemNo() {
@@ -128,11 +146,20 @@ public class Member {
 		return status;
 	}
 
+	public String getZodiac() {
+		return zodiac;
+	}
+
+	public void setZodiac(String zodiac) {
+		this.zodiac = zodiac;
+	}
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
 
 	@Override
+	// 별자리는 아직 안넣음
 	public String toString() {
 		return "Member [memNo=" + memNo + ", memId=" + memId + ", memPwd=" + memPwd + ", nickname=" + nickname
 				+ ", birthdate=" + birthdate + ", phone=" + phone + ", email=" + email + ", gender=" + gender
