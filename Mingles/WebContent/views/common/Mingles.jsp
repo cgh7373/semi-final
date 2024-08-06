@@ -222,8 +222,30 @@
             <!-- 아무탭7 -->
             <span class="material-icons anyTab7">add_circle_outline</span>
 
-            <!-- 아무탭8 -->
-            <span class="material-icons anyTab8">add_circle_outline</span>
+            <!-- 로그아웃탭 -->
+            <span class="material-icons logoutTab" onclick="logout()" title="로그아웃">logout</span>
+            
+            <script>
+            	function logout() {
+            		swal({
+            			  title: "로그아웃 하시겠어요?",
+            			  icon: "warning",
+            			  buttons: true,
+            			  dangerMode: true,
+            			})
+            			.then((willDelete) => {
+            			  if (willDelete) {
+            				location.href="/Mingles/logout.mi";
+            			  } else {
+            			    const loTab = document.querySelector('.logoutTab');
+            			    loTab.style.opacity = 1;
+            			    loTab.style.visibility = 'visible';
+                            restartFloatingAnimation(loTab);
+            			    swal("돌아가요");
+            			  }
+            			});
+            	}
+            </script>
 
         
             <!-- 거북이 -->
