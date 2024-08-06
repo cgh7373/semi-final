@@ -223,7 +223,7 @@
             <span class="material-icons anyTab7">add_circle_outline</span>
 
             <!-- 로그아웃탭 -->
-            <span class="material-icons logoutTab" onclick="logout()">logout</span>
+            <span class="material-icons logoutTab" onclick="logout()" title="로그아웃">logout</span>
             
             <script>
             	function logout() {

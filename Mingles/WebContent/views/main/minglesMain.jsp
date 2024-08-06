@@ -134,6 +134,23 @@
                 </div>
 
             </div>
+            
+            <script>
+            const show = document.getElementById("show");
+            const mp3button = document.getElementById("mp3Button");
+
+            let isShow = false;
+
+            mp3button.addEventListener("click",function(){
+                isShow = !isShow;
+                if(isShow){
+                    show.classList.add('youShow');
+                }else{
+                    show.classList.remove('youShow');
+                }
+
+            });
+            </script>
 
         </div> <!--메인화면 div 끝-->
 		<% }%>
