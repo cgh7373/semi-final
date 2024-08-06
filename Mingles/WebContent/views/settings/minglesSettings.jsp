@@ -197,6 +197,51 @@
                             <span class="set-tag">거북알 충전</span>
                         </div>
                         
+                        <div class="setbox">
+                            <span class="material-icons"></span>
+                            <span class="set-tag"></span>
+                        </div>
+
+                        <div class="setbox">
+                            <span class="material-icons"></span>
+                            <span class="set-tag"></span>
+                        </div>
+
+                        <div class="setbox">
+                            <span class="material-icons"></span>
+                            <span class="set-tag"></span>
+                        </div>
+
+                        <div class="setbox">
+                            <span class="material-icons"></span>
+                            <span class="set-tag"></span>
+                        </div>
+
+                        <div class="setbox">
+                            <span class="material-icons"></span>
+                            <span class="set-tag"></span>
+                        </div>
+
+                        <div class="setbox">
+                            <span class="material-icons"></span>
+                            <span class="set-tag"></span>
+                        </div>
+
+                        <div class="setbox">
+                            <span class="material-icons"></span>
+                            <span class="set-tag"></span>
+                        </div>
+
+                        <div class="setbox">
+                            <span class="material-icons"></span>
+                            <span class="set-tag"></span>
+                        </div>
+
+                        <div class="setbox">
+                            <span class="material-icons"></span>
+                            <span class="set-tag"></span>
+                        </div>
+
                         <script>
 							function toEgg() {
 								location.href="/Mingles/eggForm.mi";
@@ -206,52 +251,7 @@
 								location.href="/Mingles/postsForm.mi";
 							}
                         </script>
-
-                        <div class="setbox">
-                            <span class="material-icons"></span>
-                            <span class="set-tag"></span>
-                        </div>
-
-                        <div class="setbox">
-                            <span class="material-icons"></span>
-                            <span class="set-tag"></span>
-                        </div>
-
-                        <div class="setbox">
-                            <span class="material-icons"></span>
-                            <span class="set-tag"></span>
-                        </div>
-
-                        <div class="setbox">
-                            <span class="material-icons"></span>
-                            <span class="set-tag"></span>
-                        </div>
-
-                        <div class="setbox">
-                            <span class="material-icons"></span>
-                            <span class="set-tag"></span>
-                        </div>
-
-                        <div class="setbox">
-                            <span class="material-icons"></span>
-                            <span class="set-tag"></span>
-                        </div>
-
-                        <div class="setbox">
-                            <span class="material-icons"></span>
-                            <span class="set-tag"></span>
-                        </div>
-
-                        <div class="setbox">
-                            <span class="material-icons"></span>
-                            <span class="set-tag"></span>
-                        </div>
-
-                        <div class="setbox">
-                            <span class="material-icons"></span>
-                            <span class="set-tag"></span>
-                        </div>
-
+                        
                         <div class="setbox">
                             <span class="material-icons"></span>
                             <span class="set-tag"></span>
