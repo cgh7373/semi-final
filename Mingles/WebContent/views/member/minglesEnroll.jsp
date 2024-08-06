@@ -52,7 +52,7 @@
       <div class="animate__animated animate__zoomInDown">
 
        <!-- 회원가입 화면 -->
-      <div class="form_area" id="basicInfo">
+      <div class="form_area" id="basicInfoForm">
 
         <p class="title">회원 가입</p>
       <form action="<%=request.getContextPath()%>/insert.mi">
@@ -202,14 +202,14 @@
       document.addEventListener("DOMContentLoaded", function(){
         let moreInfo = document.getElementById("moreInfo");
         let moreInfoForm = document.getElementById("moreInfoForm");
-        let basicInfo = document.getElementById("basicInfo");
+        let basicInfoForm = document.getElementById("basicInfoForm");
 
         moreInfoForm.style.display = "none";
 
         moreInfo.addEventListener("click",function(){
 
             moreInfoForm.style.display = "block";
-            basicInfo.style.display = "none";
+            basicInfoForm.style.display = "none";
          
         });
 
